@@ -1,0 +1,76 @@
+
+/*#### Haha, hier ein Testkommentar
+IF ANTWORT == 1
+    K_ERGEBNIS = "Haha"
+ELSE
+    K_ERGEBNIS = "Nene"
+ENDIF
+
+IF ANTWORT == TRUE
+    K_ERGEBNIS = "Nene"
+ENDIF
+
+IF ANTWORT == FALSE
+    K_ERGEBNIS = "Nene"
+ENDIF
+
+IF TEST == HAHA
+    IF TEST2 == HUHU
+        K_ERGEBNIS2 = "ududud"
+    ENDIF
+ENDIF
+
+1 < 2
+2 > 1
+1 != 2
+1 <> 2
+1 = 1 + 2
+2 = 3 & 4
+
+/*----und hier ist der Block zu Ende
+
+/*#### Funktionen-Test
+CEIL( 
+ABS(ikscinc)
+SIN(3,1415)
+CEIL(10.255,1)
+FLOOR()
+/*----
+31.64
+
+/*#### Sollten alle gefärbt werden
+K_TEST
+M_TEST
+MG_TEST
+MGG_TEST
+MGD_TEST
+MGJ_TEST
+KAT_TEST
+CREO_TEST
+KP_TEST
+F_TEST
+ZG_TEST
+ZGPROG_TEST
+/*----
+
+DARF_NICHT /* Test ob F_ erkannt wird
+
+/* _ccaichb3f2ifzw83ubfeu we 3zhfw (dwd) ? !"§$%&/()=?*'+#-.,;:_-<>|'
+
+/* dvwsvwevwcv ä ü ö µ € @ € ~
+_wdTest
+
+/*#### Sollten alle gefärbt werden
+K_1TEST
+M_1TEST
+MG_1TEST
+MGG_1TEST /* Test
+MGD_1TEST
+MGJ_1TEST
+KAT_1TEST
+CREO_1TEST
+KP_1TEST
+F_1TEST
+ZG_1TEST
+ZGPROG_1TEST
+/*----

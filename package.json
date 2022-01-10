@@ -1,0 +1,48 @@
+{
+	"name": "vscode-creo-pro-program",
+	"displayName": "PTC Creo PRO/Program Language",
+	"description": "Support for PTC Creo PRO/Program Code",
+	"version": "0.1.0",
+	"publisher": "bgschuetze",
+	"repository": "https://github.com/bgschuetze/bgschuetze.vscode-language-creo",
+	"engines": {
+		"vscode": "^1.63.0"
+	},
+	"icon": "bgschuetze-creo-vscode.png",
+	"categories": [
+		"Programming Languages"
+	],
+	"contributes": {
+		"configurationDefaults": {
+			"[config.pro]": {
+				"files.encoding": "windows1252"
+			},
+			"[trail.txt]": {
+				"files.encoding": "windows1252"
+			},
+			"[detail.dtl]": {
+				"files.encoding": "windows1252"
+			}
+		},
+		"languages": [
+			{
+				"id": "creo",
+                "aliases": ["PTC Creo PRO/Program", "creo"],
+				"extensions": [".creo"],
+				"configuration": "./language-configuration.json"
+			}
+		],
+        "grammars": [{
+            "language": "creo",
+            "scopeName": "source.creo",
+            "path": "./syntaxes/creo.tmLanguage.json"
+        }]
+	},
+	"activationEvents": [
+		"*"
+	],
+	"main": "./extension.js",
+	"__metadata": {
+		"publisherDisplayName": "Alexander Kleile"
+	}
+}

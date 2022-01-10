@@ -1,0 +1,147 @@
+{
+	"information_for_contributors": [
+		"This file has been converted from https://github.com/mmims/language-creo/blob/master/grammars/creo.cson"
+	],
+	"version": "0.1",
+	"name": "Creo PRO/Program Language Support",
+	"scopeName": "source.creo",
+	"patterns": [
+		{
+			"include": "#commands"
+		},
+		{
+			"include": "#comments"
+		},
+		{
+			"include": "#constants"
+		},
+		{
+			"include": "#controls"
+		},
+		{
+			"include": "#escaped_characters"
+		},
+		{
+			"include": "#labels"
+		},
+		{
+			"include": "#numbers"
+		},
+		{
+			"include": "#operators"
+		},
+		{
+			"include": "#parens"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#variables"
+		}
+	],
+	"repository": {
+		"commands": {
+			"patterns": [
+				{
+					"match": "\\b(COS|SIN|TAN|SQRT|ASIN|ACOS|ATAN|SINH|COSH|TANH|LOG|LN|EXP|ABS|CEIL|FLOOR|REL_MODEL_NAME|REL_MODEL_TYPE|EXISTS|ITOS|SEARCH|EXTRACT|STRING_LENGTH)\\b",
+					"name": "keyword.command.creo"
+				}
+			]
+		},
+		"constants": {
+			"patterns": [
+				{
+					"match": "\\b(TRUE|FALSE)\\b",
+					"name": "constant.language.creo"
+				}
+			]
+		},		
+		"numbers": {
+			"patterns": [
+				{
+					"match": "(?x)\n(?<!\\$)\n(\n  \\b[0-9]([0-9_]*[0-9])?\\.\\B(?!\\.)\n  |\n  \\b[0-9]([0-9_]*[0-9])?\\.([Ee][+-]?[0-9]([0-9_]*[0-9])?)[FfDd]?\\b\n  |\n  \\b[0-9]([0-9_]*[0-9])?\\.([Ee][+-]?[0-9]([0-9_]*[0-9])?)?[FfDd]\\b\n  |\n  \\b[0-9]([0-9_]*[0-9])?\\.([0-9]([0-9_]*[0-9])?)([Ee][+-]?[0-9]([0-9_]*[0-9])?)?[FfDd]?\\b\n  |\n  (?<!\\.)\\B\\.[0-9]([0-9_]*[0-9])?([Ee][+-]?[0-9]([0-9_]*[0-9])?)?[FfDd]?\\b\n  |\n  \\b[0-9]([0-9_]*[0-9])?([Ee][+-]?[0-9]([0-9_]*[0-9])?)[FfDd]?\\b\n  |\n  \\b[0-9]([0-9_]*[0-9])?([Ee][+-]?[0-9]([0-9_]*[0-9])?)?[FfDd]\\b\n  |\n  \\b(0|[1-9]([0-9_]*[0-9])?)(?!\\.)[Ll]?\\b\n)\n(?!\\$)",
+					"name": "constant.numeric.creo"
+				}
+			]
+		},
+		"comments": {
+			"patterns": [
+				{
+					"match": "(/\\*)[A-Z,a-z,0-9,\\s,\\.,\\W,\\w,\\_]*",
+					"name": "comment.line.creo"
+				}
+			]
+		},
+		"controls": {
+			"patterns": [
+				{
+					"match": "\\b(IF|ELSE|ENDIF)\\b",
+					"name": "keyword.control.creo"
+						}
+			]
+		},
+		"operators": {
+			"patterns": [
+				{
+					"match": "(==|!=|<=|>=|<>|<|>)",
+					"name": "keyword.operator.comparison.creo"
+				},
+				{
+					"match": "([+*/%-])",
+					"name": "keyword.operator.assignment.arithmetic.creo"
+				},
+				{
+					"match": "(=)",
+					"name": "keyword.operator.assignment.creo"
+				},
+				{
+					"match": "(&)",
+					"name": "keyword.operator.conditional.creo"
+				}
+			]
+		},
+		"strings": {
+			"patterns": [
+				{
+					"begin": "\"",
+					"beginCaptures": {
+						"0": {
+							"name": "punctuation.definition.string.begin.creo"
+						}
+					},
+					"end": "(\")|(\\n)",
+					"endCaptures": {
+						"1": {
+							"name": "punctuation.definition.string.end.creo"
+						},
+						"2": {
+							"name": "invalid.illegal.newline.creo"
+						}
+					},
+					"name": "string.quoted.double.creo",
+					"patterns": [
+						{
+							"match": "%%",
+							"name": "constant.character.escape.creo"
+						},
+						{
+							"include": "#variables"
+						}
+					]
+				}
+			]
+		},
+		"variables": {
+			"patterns": [
+				{
+					"match": "\\b(K|M|F|MG|MGG|MGD|MGJ|KAT|CREO|KP|ZG|ZGPROG)_[A-Z,0-9,a-z]*",
+					"name": "variable.parameter.creo"
+				},
+				{
+					"include": "#variable"
+				}
+			]
+		}
+	}
+}
