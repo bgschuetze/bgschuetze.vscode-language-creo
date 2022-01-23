@@ -51,6 +51,9 @@ KP_TEST
 F_TEST
 ZG_TEST
 ZGPROG_TEST
+K_TÄST
+K_TÜT
+K_TÖT
 /*----
 
 DARF_NICHT /* Test ob F_ erkannt wird

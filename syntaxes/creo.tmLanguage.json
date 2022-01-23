@@ -135,7 +135,7 @@
 		"variables": {
 			"patterns": [
 				{
-					"match": "\\b(K|M|F|MG|MGG|MGD|MGJ|KAT|CREO|KP|ZG|ZGPROG)_[A-Z,0-9,a-z,\\_]*",
+					"match": "\\b(K|M|F|MG|MGG|MGD|MGJ|KAT|CREO|KP|ZG|ZGPROG)_[A-ZÄÜÖß,0-9,a-zäüöß,\\_]*",
 					"name": "variable.parameter.creo"
 				},
 				{
