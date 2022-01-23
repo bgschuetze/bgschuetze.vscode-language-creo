@@ -2,7 +2,7 @@
 	"information_for_contributors": [
 		"This file has been converted from https://github.com/mmims/language-creo/blob/master/grammars/creo.cson"
 	],
-	"version": "0.1.0",
+	"version": "1.0.0",
 	"name": "Creo PRO/Program Language Support",
 	"scopeName": "source.creo",
 	"patterns": [

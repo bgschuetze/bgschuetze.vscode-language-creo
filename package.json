@@ -2,7 +2,7 @@
 	"name": "vscode-creo-pro-program",
 	"displayName": "PTC Creo PRO/Program Language",
 	"description": "Support for PTC Creo PRO/Program Code",
-	"version": "0.1.0",
+	"version": "1.0.0",
 	"publisher": "bgschuetze",
 	"repository": "https://github.com/bgschuetze/bgschuetze.vscode-language-creo",
 	"engines": {

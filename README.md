@@ -34,7 +34,12 @@ Keine derzeit bekannten Probleme.
 
 Hier kommen die Release Notes:
 
-### 0.1
+### 1.0.0
+Erstes öffentliches Release:
+  - Basisfunktionen funktionieren
+  - 2 Issues behoben
+
+### 0.1.0
 
 Erstes Release:
   - Highlighting funktioniert
