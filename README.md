@@ -26,6 +26,10 @@ Folgendes wird Eingefärbt:
 
 Keine derzeit bekannten Probleme.
 
+## Testen der Erweiterung
+
+Es ist eine Datei enthalten, in der die Fähigkeiten der Erweiterung getestet/betrachtet werden können.
+
 ## Geplante Funktionen
 
   - Hover-Informationen zu den Funktionen
