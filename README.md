@@ -1,13 +1,14 @@
 # vscode-creo-pro-program README
 
 Dies ist das README für "vscode-creo-pro-program". Mit diesem Plugin wird der PRO/Program-Code von PTC Creo Parametric unterstützt.
+This is the README for "vscode-creo-pro-program". With this Plugin there is support for the PRO/Program-Language of PTC Creo Parametric.
 
-## Funktionen
+## Funktionen / Functions
 
-Folgendes wird Eingefärbt:
-- Operatoren (Vergleichende + Arithmetrische)
-- Funktionen
-- Variablen, die folgende Prefixe besitzen:
+Folgendes wird Eingefärbt/Following will be highlighted:
+- Operatoren (Vergleichende + Arithmetrische) / Operators (Comparison + Arithmetric)
+- Funktionen / Functions
+- Variablen, die folgende Prefixe besitzen / Variables with following Prefixes:
   - K_
   - M_
   - MG_
@@ -22,40 +23,45 @@ Folgendes wird Eingefärbt:
   - ZGPROG_
 
 
-## Bekannte Probleme
+## Bekannte Probleme / Known Problems
 
-Keine derzeit bekannten Probleme.
+Keine derzeit bekannten Probleme. / None known at this time.
 
-## Testen der Erweiterung
+## Testen der Erweiterung / Testing the Plugin
 
 Es ist eine Datei enthalten, in der die Fähigkeiten der Erweiterung getestet/betrachtet werden können.
+There's a file included, which shows it's abilities.
 
-## Geplante Funktionen
+## Geplante Funktionen / Planned Functionality
 
-  - Hover-Informationen zu den Funktionen
+  - Hover-Informationen zu den Funktionen / Hover-Informations to the Functions
+
+## Lizenz / Licensing
+AGPL-3.0-or-later -> siehe auch die Lizenzdatei license.txt / have a look at license.txt
 
 ## Release Notes
 
-Hier kommen die Release Notes:
+Hier kommen die Release Notes / Here are the Release Notes:
 
 ### 1.0.1
 
 kleine Verbesserungen und Vorbereitungen für das Veröffentlichen im Marketplace.
+Little Improvements und preparations for publishing in the marketplace.
 
 ### 1.0.0
-Erstes öffentliches Release:
-  - Basisfunktionen funktionieren
-  - 2 Issues behoben
+Erstes öffentliches Release / First public Release:
+  - Basisfunktionen funktionieren / Basic-Functions working
+  - 2 Probleme behoben / 2 Issues solved
 
 ### 0.1.0
 
-Erstes Release:
-  - Highlighting funktioniert
-  - STRG+Leertaste liefert Code-Vorschläge
+Erstes Release /  First Release:
+  - Highlighting funktioniert / Highlighting works
+  - STRG+Leertaste liefert Code-Vorschläge / Ctrl+Spacebar shows Code-proposals
 
 
 
-##### Folgender Inhalt kommt aus der Vorlage und bleibt der Einfachheit halber da....
+##### Folgender Inhalt kommt aus der Vorlage und bleibt der Einfachheit halber da / Following Content is from template and stays for simplicity....
 -----------------------------------------------------------------------------------------------------------
 
 ## Working with Markdown
