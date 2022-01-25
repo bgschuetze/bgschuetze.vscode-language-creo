@@ -38,6 +38,10 @@ Es ist eine Datei enthalten, in der die Fähigkeiten der Erweiterung getestet/be
 
 Hier kommen die Release Notes:
 
+### 1.0.1
+
+kleine Verbesserungen und Vorbereitungen für das Veröffentlichen im Marketplace.
+
 ### 1.0.0
 Erstes öffentliches Release:
   - Basisfunktionen funktionieren
