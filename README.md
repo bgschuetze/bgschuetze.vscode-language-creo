@@ -1,40 +1,43 @@
 # vscode-creo-pro-program README
 
 Dies ist das README für "vscode-creo-pro-program". Mit diesem Plugin wird der PRO/Program-Code von PTC Creo Parametric unterstützt.
+Falls die Erweiterung gefällt, würde ich mich über eine Bewertung auf dem Marketplace oder im CAD.de-Forum freuen.
+
 This is the README for "vscode-creo-pro-program". With this Plugin there is support for the PRO/Program-Language of PTC Creo Parametric.
+If you like the extension, I would appreciate a review on the Marketplace or in the CAD.de forum.
 
 ## Funktionen / Functions
+Diese Erweiterung beherrscht folgende Funktionen / This extension has the following functions:
+- Code-Verschönerung (creo.autoIndent) -> formatiert den Code, damit er besser lesbar ist / Code beautification (creo.autoIndent) -> formats the code so that it is easier to read
+- Code-Einfärbungen / Code-Highlighting:
+  - Operatoren (Vergleichende + Arithmetrische) / Operators (Comparison + Arithmetric)
+  - Funktionen / Functions
+  - Variablen, die folgende Prefixe besitzen / Variables with following Prefixes:
+    - K_
+    - M_
+    - MG_
+    - MGG_
+    - MGD_
+    - MGJ_
+    - KAT_
+    - CREO_
+    - KP_
+    - F_
+    - ZG_
+    - ZGPROG_
 
-Folgendes wird Eingefärbt/Following will be highlighted:
-- Operatoren (Vergleichende + Arithmetrische) / Operators (Comparison + Arithmetric)
-- Funktionen / Functions
-- Variablen, die folgende Prefixe besitzen / Variables with following Prefixes:
-  - K_
-  - M_
-  - MG_
-  - MGG_
-  - MGD_
-  - MGJ_
-  - KAT_
-  - CREO_
-  - KP_
-  - F_
-  - ZG_
-  - ZGPROG_
-
+Um die Auto-Indent-Funktion zu benutzen muss in der Befehlsleiste (Strg+Umschalt+p) "Creo: Auto Indent File" benutzt werden. 
+To use the auto-indent function, ‘Creo: Auto Indent File’ must be used in the command bar (Ctrl+Shift+p).
 
 ## Bekannte Probleme / Known Problems
-
 Keine derzeit bekannten Probleme. / None known at this time.
 
 ## Testen der Erweiterung / Testing the Plugin
-
 Es ist eine Datei enthalten, in der die Fähigkeiten der Erweiterung getestet/betrachtet werden können.
 There's a file included, which shows it's abilities.
 
 ## Geplante Funktionen / Planned Functionality
-
-  - Hover-Informationen zu den Funktionen / Hover-Informations to the Functions
+- keine / none
 
 ## Lizenz / Licensing
 AGPL-3.0-or-later -> siehe auch die Lizenzdatei license.txt / have a look at license.txt
@@ -43,8 +46,10 @@ AGPL-3.0-or-later -> siehe auch die Lizenzdatei license.txt / have a look at lic
 
 Hier kommen die Release Notes / Here are the Release Notes:
 
-### 1.0.1
+### 1.1
+Funktion creo.autoIndent eingefügt
 
+### 1.0.1
 kleine Verbesserungen und Vorbereitungen für das Veröffentlichen im Marketplace.
 Little Improvements und preparations for publishing in the marketplace.
 
