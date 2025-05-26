@@ -46,7 +46,7 @@ AGPL-3.0-or-later -> siehe auch die Lizenzdatei license.txt / have a look at lic
 
 Hier kommen die Release Notes / Here are the Release Notes:
 
-### 1.1
+### 1.1.0
 Funktion creo.autoIndent eingefügt
 
 ### 1.0.1
