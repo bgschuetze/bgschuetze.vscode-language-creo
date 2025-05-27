@@ -2,12 +2,21 @@
 	"name": "vscode-creo-pro-program",
 	"displayName": "PTC Creo PRO/Program Language",
 	"description": "Support for PTC Creo PRO/Program Code",
-	"version": "1.1.0",
+	"version": "1.1.1",
 	"publisher": "bgschuetze",
-	"repository": "https://github.com/bgschuetze/bgschuetze.vscode-language-creo",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/bgschuetze/bgschuetze.vscode-language-creo.git"
+	},
 	"engines": {
 		"vscode": "^1.63.0"
 	},
+	"keywords": [
+		"creo",
+		"pro/program",
+		"ptc",
+		"cad"
+	],
 	"icon": "bgschuetze-creo-vscode.png",
 	"categories": [
 		"Programming Languages"
@@ -36,13 +45,17 @@
             "language": "creo",
             "scopeName": "source.creo",
             "path": "./syntaxes/creo.tmLanguage.json"
-        }]
+        }],
+		"commands": [
+			{
+			"command": "creo.autoIndent",
+			"title": "Creo: Auto-Indent Code"
+			}
+		]
 	},
 	"activationEvents": [
-		"*"
+		"onLanguage:creo",
+		"onCommand:creo.autoIndent"
 	],
-	"main": "./extension.js",
-	"__metadata": {
-		"publisherDisplayName": "Alexander Kleile"
-	}
+	"main": "./extension.js"
 }

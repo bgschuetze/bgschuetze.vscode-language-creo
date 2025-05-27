@@ -46,8 +46,11 @@ AGPL-3.0-or-later -> siehe auch die Lizenzdatei license.txt / have a look at lic
 
 Hier kommen die Release Notes / Here are the Release Notes:
 
+### 1.1.1
+Fehlerkorrektur, creo.autoindent wurde nicht richtig geladen. / Error correction, creo.autoindent was not loaded correctly.
+
 ### 1.1.0
-Funktion creo.autoIndent eingefügt
+Funktion creo.autoIndent eingefügt / Function creo.autoindent added
 
 ### 1.0.1
 kleine Verbesserungen und Vorbereitungen für das Veröffentlichen im Marketplace.
