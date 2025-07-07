@@ -9,6 +9,7 @@ If you like the extension, I would appreciate a review on the Marketplace or in 
 ## Funktionen / Functions
 Diese Erweiterung beherrscht folgende Funktionen / This extension has the following functions:
 - Code-Verschönerung (creo.autoIndent) -> formatiert den Code, damit er besser lesbar ist / Code beautification (creo.autoIndent) -> formats the code so that it is easier to read
+- TODO, FIXME, FEHLER, HINWEIS werden in Kommentaren farbig markiert und im neuen Aktivitätentab aufgelistet / TODO, FIXME, ERROR, NOTE are highlighted in color in comments and listed in the new activity tab
 - Code-Einfärbungen / Code-Highlighting:
   - Operatoren (Vergleichende + Arithmetrische) / Operators (Comparison + Arithmetric)
   - Funktionen / Functions
@@ -29,6 +30,8 @@ Diese Erweiterung beherrscht folgende Funktionen / This extension has the follow
 Um die Auto-Indent-Funktion zu benutzen muss in der Befehlsleiste (Strg+Umschalt+p) "Creo: Auto Indent File" benutzt werden. 
 To use the auto-indent function, ‘Creo: Auto Indent File’ must be used in the command bar (Ctrl+Shift+p).
 
+Um die Erstellung eines Dateisatzes anzustoßen, genügt ein Rechtsklick auf einen Ordner im Explorer, im Kontextmneü ist dann der Eintrag "Erstelle .creo-Dateisatz" verfügbar. To initiate the creation of a file set, simply right-click on a folder in the Explorer and the “Create .creo file set” entry will be available in the context menu.
+
 ## Bekannte Probleme / Known Problems
 Keine derzeit bekannten Probleme. / None known at this time.
 
@@ -37,7 +40,10 @@ Es ist eine Datei enthalten, in der die Fähigkeiten der Erweiterung getestet/be
 There's a file included, which shows it's abilities.
 
 ## Geplante Funktionen / Planned Functionality
-- keine / none
+- Verbesserung der Einrückung während der Eingabe / Improvement of indentation during input
+- Einstellungen in der Aktivitätenleiste/den Einstellungen statt per Datei "settings.json" / Settings in the activity baror in settings instead of via the “settings.json” file
+- Vorstellungsvideo / Introduction video
+- Internationalisierung (kein Schwerpunkt) / Internationalization (no focus)
 
 ## Lizenz / Licensing
 AGPL-3.0-or-later -> siehe auch die Lizenzdatei license.txt / have a look at license.txt
@@ -45,6 +51,12 @@ AGPL-3.0-or-later -> siehe auch die Lizenzdatei license.txt / have a look at lic
 ## Release Notes
 
 Hier kommen die Release Notes / Here are the Release Notes:
+
+### 1.2.0
+Neue Funktionen / New Functions:
+- Markieren von TODO;FIXME;FEHLER;HINWEIS in Kommentaren / Marking TODO;FIXME;ERROR;NOTE in comments
+- Neue Ansicht in der Aktivitätenleiste "Creo Todo", hier werden alle Markierungen mit TODO;FIXME;FEHLER angezeigt / New view in the activity bar “Creo Todo”, all markings with TODO;FIXME;ERROR are displayed here
+- Neue Rechtsklick-Funktion "Creo-Dateisatz erstellen" fügt einen Unterordner mit den typischen Dateien hinzu / New right-click-function “Create Creo file set” adds a subfolder with the typical files
 
 ### 1.1.1
 Fehlerkorrektur, creo.autoindent wurde nicht richtig geladen. / Error correction, creo.autoindent was not loaded correctly.

@@ -1,8 +1,5 @@
 {
-	"information_for_contributors": [
-		"This file has been converted from https://github.com/mmims/language-creo/blob/master/grammars/creo.cson"
-	],
-	"version": "1.1.1",
+	"version": "1.2.0",
 	"name": "Creo PRO/Program Language Support",
 	"scopeName": "source.creo",
 	"patterns": [
@@ -52,7 +49,7 @@
 		"constants": {
 			"patterns": [
 				{
-					"match": "\\b(TRUE|FALSE)\\b",
+					"match": "\\b(YES|NO)\\b",
 					"name": "constant.language.creo"
 				}
 			]
@@ -135,7 +132,7 @@
 		"variables": {
 			"patterns": [
 				{
-					"match": "\\b(K|M|F|MG|MGG|MGD|MGJ|KAT|CREO|KP|ZG|ZGPROG)_[A-ZÄÜÖß,0-9,a-zäüöß,\\_]*",
+					"match": "\\b(K|M|F|MG|MGG|MGD|MGJ|KAT|CREO|KP|ZG|ZGPROG|EFP)_[A-ZÄÜÖß,0-9,a-zäüöß,\\_]*",
 					"name": "variable.parameter.creo"
 				},
 				{

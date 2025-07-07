@@ -92,3 +92,8 @@ F_1TEST_Test
 ZG_1TEST_Test
 ZGPROG_1TEST_Test
 /*----
+
+/* TODO this is a test
+/* FIXME this is a test
+/* FEHLER dies ist ein Test
+/* HINWEIS dies ist ein weiterer Test

@@ -2,7 +2,7 @@
 	"name": "vscode-creo-pro-program",
 	"displayName": "PTC Creo PRO/Program Language",
 	"description": "Support for PTC Creo PRO/Program Code",
-	"version": "1.1.1",
+	"version": "1.2.0",
 	"publisher": "bgschuetze",
 	"repository": {
 		"type": "git",
@@ -22,36 +22,101 @@
 		"Programming Languages"
 	],
 	"contributes": {
-		"configurationDefaults": {
-			"[config.pro]": {
-				"files.encoding": "windows1252"
-			},
-			"[trail.txt]": {
-				"files.encoding": "windows1252"
-			},
-			"[detail.dtl]": {
-				"files.encoding": "windows1252"
+        "configurationDefaults": {
+            "[creo]": {
+                "editor.rulers": [80],
+                "explorer.decorations.colors": false
+            }
+        },
+		"configuration": {
+			"title": "Creo PRO/Program",
+			"properties": {
+				"creo.todoForeground": {
+					"type": "string",
+					"default": "#F70000",
+					"description": "Textfarbe für TODO-Markierungen"
+				},
+				"creo.todoBackground": {
+					"type": "string",
+					"default": "#EFF704",
+					"description": "Hintergrundfarbe für TODO-Markierungen"
+				}
 			}
 		},
 		"languages": [
 			{
 				"id": "creo",
-                "aliases": ["PTC Creo PRO/Program", "creo"],
-				"extensions": [".creo"],
+				"aliases": [
+					"PTC Creo PRO/Program",
+					"creo"
+				],
+				"extensions": [
+					".creo"
+				],
 				"configuration": "./language-configuration.json"
 			}
 		],
-        "grammars": [{
-            "language": "creo",
-            "scopeName": "source.creo",
-            "path": "./syntaxes/creo.tmLanguage.json"
-        }],
+		"grammars": [
+			{
+				"language": "creo",
+				"scopeName": "source.creo",
+				"path": "./syntaxes/creo.tmLanguage.json"
+			}
+		],
 		"commands": [
 			{
-			"command": "creo.autoIndent",
-			"title": "Creo: Auto-Indent Code"
-			}
-		]
+				"command": "creo.autoIndent",
+				"title": "Creo: Auto-Indent Code"
+			},
+			{
+				"command": "creoTodos.refresh",
+				"title": "Todo-Liste aktualisieren"
+			},
+            {
+                "command": "creo.createCreoFiles",
+                "title": "Creo: Erstelle .creo-Dateisatz"
+            }
+		],
+		"viewsContainers": {
+			"activitybar": [
+				{
+					"id": "creoSidebar",
+					"title": "CREO ToDo's",
+					"icon": "resources/bgschuetze_todo.svg"
+				}
+			]
+		},
+		"views": {
+			"creoSidebar": [
+				{
+					"id": "creoTodos",
+					"name": "CREO TODOs",
+					"icon": "resources/bgschuetze_todo.svg"
+				}
+			]
+		},
+		"menus": {
+			"view/title": [
+				{
+					"command": "creoTodos.refresh",
+                    "when": "view == creoTodos",
+					"group": "navigation"
+				}
+			],
+            "explorer/context": [
+                {
+                "command": "creo.createCreoFiles",
+                "when": "explorerResourceIsFolder",
+                "group": "7_modification"
+                }
+            ]
+		},
+		"activationEvents": [
+            "onLanguage:creo",
+            "onCommand:creo.autoIndent",
+            "onCommand:creo.createCreoFiles",
+            "onView:creoTodos"
+        ]
 	},
 	"activationEvents": [
 		"onLanguage:creo",
