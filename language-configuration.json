@@ -31,6 +31,6 @@
 	},
     "indentationRules": {
         "increaseIndentPattern": "\\b(IF|ELSE)\\b",
-        "decreaseIndentPattern": "\\b(ENDIF)\\b"
+        "decreaseIndentPattern": "\\b(ELSE|ENDIF)\\b"
       }
 }
