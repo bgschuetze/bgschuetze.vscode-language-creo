@@ -1,6 +1,6 @@
-# vscode-creo-pro-program README
+# PTC Creo PRO/Program Language README
 
-Dies ist das README für "vscode-creo-pro-program". Mit diesem Plugin wird der PRO/Program-Code von PTC Creo Parametric unterstützt.
+Dies ist das README für "PTC Creo PRO/Program Language". Mit diesem Plugin wird der PRO/Program-Code von PTC Creo Parametric unterstützt.
 Falls die Erweiterung gefällt, würde ich mich über eine Bewertung auf dem Marketplace oder im CAD.de-Forum freuen.
 
 This is the README for "vscode-creo-pro-program". With this Plugin there is support for the PRO/Program-Language of PTC Creo Parametric.
@@ -26,6 +26,8 @@ Diese Erweiterung beherrscht folgende Funktionen / This extension has the follow
     - F_
     - ZG_
     - ZGPROG_
+- Auto-Vervollständigung mit Creo-Funktionen und Paramaternamen aus dem aktuellen Dokument / Auto-completion with Creo functions and parameter names from the current document
+- Diagnose von IF-Blöcken auf richtige Vergleich-Operanden / Diagnosis of IF blocks on correct comparison operands
 
 Um die Auto-Indent-Funktion zu benutzen muss in der Befehlsleiste (Strg+Umschalt+p) "Creo: Auto Indent File" benutzt werden. 
 To use the auto-indent function, ‘Creo: Auto Indent File’ must be used in the command bar (Ctrl+Shift+p).
@@ -35,12 +37,20 @@ Um die Erstellung eines Dateisatzes anzustoßen, genügt ein Rechtsklick auf ein
 ## Bekannte Probleme / Known Problems
 Keine derzeit bekannten Probleme. / None known at this time.
 
+## Konfiguration der Erweiterung / Configuration of the extension
+in der settings.json können folgende EInstellungen gesetzt werden / The following settings can be set in settings.json:
+~~~
+{
+  "creo.todoForeground": "#FF0000",
+  "creo.todoBackground": "#FFFF00"
+}
+~~~
+
 ## Testen der Erweiterung / Testing the Plugin
 Es ist eine Datei enthalten, in der die Fähigkeiten der Erweiterung getestet/betrachtet werden können.
 There's a file included, which shows it's abilities.
 
 ## Geplante Funktionen / Planned Functionality
-- Verbesserung der Einrückung während der Eingabe / Improvement of indentation during input
 - Einstellungen in der Aktivitätenleiste/den Einstellungen statt per Datei "settings.json" / Settings in the activity baror in settings instead of via the “settings.json” file
 - Vorstellungsvideo / Introduction video
 - Internationalisierung (kein Schwerpunkt) / Internationalization (no focus)

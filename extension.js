@@ -8,10 +8,13 @@ let todoTreeDataProvider = null;
 let todoDecorationType = null;
 
 function activate(context) {
+
+    // Anfang Auto-Vervollständigung
     const provider = vscode.languages.registerCompletionItemProvider('creo', {
         provideCompletionItems(document, position, token, context) {
             const completionItems = [];
 
+            // 1. Standardfunktionen
             const configOptions = [
                 { label: 'CEIL(', description: 'CEIL(Zahl, Anzahl Dezimalstellen) -> Die kleinste ganze Zahl, die nicht kleiner als die reelle Zahl ist. CEIL( (10.255, 2) ergibt 10.26', snippet: '', defaultValue: '' },
                 { label: 'FLOOR(', description: 'FLOOR(Zahl, Anzahl Dezimalstellen) -> Die größte ganze Zahl, die nicht größer als die reelle Zahl ist. floor(10.255, 1) ergibt 10.2', snippet: '', defaultValue: '' },
@@ -33,9 +36,11 @@ function activate(context) {
                 { label: 'ITOS(', description: 'Konvertiert ganze Zahlen (Integers) in Zeichenketten. Hierbei kann LQW eine Zahl oder ein Ausdruck sein. Fließkommazahlen werden nach oben gerundet.', snippet: '', defaultValue: '' },
                 { label: 'SEARCH(', description: 'Dient zum Suchen nach Unterzeichenketten (substrings). Der resultierende Wert ist die Position der Unterzeichenkette innerhalb der Zeichenkette (0, falls diese nicht gefunden wird).', snippet: '', defaultValue: '' },
                 { label: 'EXTRACT(', description: 'EXTRACT(String, Position, Länge) -> Extrahiert Teilstücke von Zeichenketten', snippet: '', defaultValue: '' },
-                { label: 'STRING_LENGTH(', description: 'Gibt die Anzahl der Zeichen in einem Parameter zurück', snippet: '', defaultValue: '' }
+                { label: 'STRING_LENGTH(', description: 'Gibt die Anzahl der Zeichen in einem Parameter zurück', snippet: '', defaultValue: '' },
+                { label: 'STRING_STARTS(', description: 'Prüft, ob der String mit dem/den definierten Zeichen beginnt', snippet: '', defaultValue: '' },
+                { label: 'STRING_ENDS(', description: 'Prüft, ob der String mit dem/den definierten Zeichen endet', snippet: '', defaultValue: '' }
             ];
-
+            
             configOptions.forEach(({ label, description, snippet, defaultValue }) => {
                 const item = new vscode.CompletionItem(label);
                 item.label = label;
@@ -45,14 +50,33 @@ function activate(context) {
                 completionItems.push(item);
             });
 
+            // 2. Variablen aus dem aktuellen Dokument auslesen
+            const text = document.getText();
+            const varRegex = /\b[A-Za-z][A-Za-z0-9_]*\b/g;
+            const vars = new Set();
+
+            let match;
+            while ((match = varRegex.exec(text)) !== null) {
+                const v = match[0];
+                if (!reserved.includes(v.toLowerCase())) {
+                    vars.add(v);
+                }
+            }
+
+            // 3. Variablen als CompletionItems hinzufügen
+            vars.forEach(v => {
+                const item = new vscode.CompletionItem(v, vscode.CompletionItemKind.Variable);
+                completionItems.push(item);
+            });
+
+
             return completionItems;
         }
     });
-
-
-
     context.subscriptions.push(provider);
+    // Ende Auto-Vervollständigung
 
+    // Anfang Auto-Indent-Funktion
     const indentCommand = vscode.commands.registerCommand('creo.autoIndent', () => {
         const editor = vscode.window.activeTextEditor;
         if (!editor) return;
@@ -74,7 +98,9 @@ function activate(context) {
     });
 
     context.subscriptions.push(indentCommand);
-    
+    // Ende Auto-Indent-Funktion
+
+    // Anfang Diagnostik-Funktion
     const diagnosticCollection = vscode.languages.createDiagnosticCollection('creo-syntax');
     context.subscriptions.push(diagnosticCollection);
 
@@ -102,6 +128,8 @@ function activate(context) {
 
         diagnosticCollection.set(event.document.uri, diagnostics);
     });
+    // Anfang Diagnostik-Funktion
+
     vscode.window.onDidChangeActiveTextEditor(editor => {
     if (editor && editor.document.languageId === 'creo') {
         highlightTodos(editor);

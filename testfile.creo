@@ -1,21 +1,22 @@
 
 /*#### Haha, hier ein Testkommentar
-IF ANTWORT == 1
+IF MGG_ANTWORT == 1
     K_ERGEBNIS = "Haha"
 ELSE
     K_ERGEBNIS = "Nene"
 ENDIF
 
-IF ANTWORT == TRUE
+IF ANTWORT == YES
     K_ERGEBNIS = "Nene"
 ENDIF
 
-IF ANTWORT == FALSE
+IF ANTWORT == NO
     K_ERGEBNIS = "Nene"
 ENDIF
 
-IF TEST == HAHA
-    IF TEST2 == HUHU
+/* FIXME hier soll noch was korrigiert werden
+IF MG_TEST == "HAHA"
+    IF TEST2 = HUHU /*FEHLER hier wird ein Fehler markiert
         K_ERGEBNIS2 = "ududud"
     ENDIF
 ENDIF
